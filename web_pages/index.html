@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="shortcut icon" href="https://e1.pngegg.com/pngimages/248/132/png-clipart-flader-82-default-icons-for-apple-app-mac-os-x-calculator-v2-mathematical-equation-buttons.png" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     {% block content %}
+    <style>
+        .frame{
+             background-color:gainsboro;
+        } 
+        input{  
+            width: 18px;  
+            height: 15px;
+            background-color: white;  
+            color: black;  
+            border: 3px solid gray;  
+                border-radius: 30px;  
+                padding: 26px;  
+                margin: 5px;  
+                font-size: 15px; 
+        }  
+
+        #calc{  
+            width: 250px;  
+            border: 2px solid gray;  
+                border-radius: 7px;  
+                padding: 20px;  
+                margin: auto;  
+        }  
+        .r0,.r1,.r2,.r3,.r4{
+            display: inline-block;
+        }
+        .frame{
+            padding-left: 37%;
+        }
+        .content{
+            padding: 20px;
+            background-color: black;
+            max-width: 42%;
+            border-radius: 15px;
+        }
+    </style>
         <div class="frame">
             <div class="content">
         <form action="eq" method="post" > 
