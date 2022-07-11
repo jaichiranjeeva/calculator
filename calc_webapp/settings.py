@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-s++8*qzm)(8o^*8n7%=xnzvu**5ks)s=-+bw!al(4_39byauix
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS =['*']
+CSRF_TRUSTED_ORIGINS =['https://calculator-jai91.azurewebsites.net','*']
 
 
 # Application definition
