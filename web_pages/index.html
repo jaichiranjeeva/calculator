@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="https://e1.pngegg.com/pngimages/248/132/png-clipart-flader-82-default-icons-for-apple-app-mac-os-x-calculator-v2-mathematical-equation-buttons.png" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    {% block content %}
+        <div class="frame">
+            <div class="content">
+        <form action="eq" method="post" > 
+            {% csrf_token %}    
+            <input id = "calc" type ="text" name = "answer" value="{{result}}"> <br> <br>  
+        </form>  
+    
+    
+        <form action="inp" method="post" class="r0">
+            {% csrf_token %}
+            <input type = "submit" value = "(" name="val">
+            
+        </form>  
+        <form action="inp" method="post" class="r0">
+            {% csrf_token %}
+            <input type = "submit" value = ")" name="val">
+        </form>
+        <form action="ac" method="post" class="r0">
+            {% csrf_token %}
+            <input type = "submit" value = "Ac" >
+        </form>
+        <form action="bs" method="post" class="r0">
+            {% csrf_token %}
+            <input type = "submit" value = "BS" >
+        </form>        
+        <br> <br>   
+    
+    
+    
+        <form action="inp" method="post" class="r1">
+            {% csrf_token %}
+            <input type = "submit" value = "7" name="val">
+            
+        </form>  
+        <form action="inp" method="post" class="r1">
+            {% csrf_token %}
+            <input type = "submit" value = "8" name="val">
+        </form>
+        <form action="inp" method="post" class="r1">
+            {% csrf_token %}
+            <input type = "submit" value = "9" name="val">
+        </form>
+        <form action="inp" method="post" class="r1">
+            {% csrf_token %}
+            <input type = "submit" value = "*" name="val">
+        </form>        
+        <br> <br> 
+    
+    
+    
+        
+        <form action="inp" method="post" class="r2">
+            {% csrf_token %}
+            <input type = "submit" value = "4" name="val">            
+        </form>  
+        <form action="inp" method="post" class="r2">
+            {% csrf_token %}
+            <input type = "submit" value = "5" name="val">
+        </form>
+        <form action="inp" method="post" class="r2">
+            {% csrf_token %}
+            <input type = "submit" value = "6" name="val">
+        </form>
+        <form action="inp" method="post" class="r2">
+            {% csrf_token %}
+            <input type = "submit" value = "-" name="val">
+        </form>        
+        <br> <br> 
+          
+        
+    
+        <form action="inp" method="post" class="r3">
+            {% csrf_token %}
+            <input type = "submit" value = "1" name="val">
+        </form>  
+        <form action="inp" method="post" class="r3">
+            {% csrf_token %}
+            <input type = "submit" value = "2" name="val">
+        </form>
+        <form action="inp" method="post" class="r3">
+            {% csrf_token %}
+            <input type = "submit" value = "3" name="val">
+        </form>
+        <form action="inp" method="post" class="r3">
+            {% csrf_token %}
+            <input type = "submit" value = "+" name="val">
+        </form>        
+        <br> <br>    
+    
+     
+          
+        <form action="inp" method="post" class="r4">
+            {% csrf_token %}
+            <input type = "submit" value = "/" name="val">
+        </form>  
+        <form action="inp" method="post" class="r4">
+            {% csrf_token %}
+            <input type = "submit" value = "0" name="val">
+        </form>
+        <form action="inp" method="post" class="r4">
+            {% csrf_token %}
+            <input type = "submit" value = "." name="val">
+        </form>
+        <form action="evalute" method="post" class="r4">
+            {% csrf_token %}
+            <input type = "submit" value = "=" >
+        </form>        
+        <br>
+    </div>
+</div>
+    {% endblock %}
+</body>
+</html>
